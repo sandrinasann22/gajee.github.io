@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulasi Pergerakan Orbit dan Kalkulator Curah Hujan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #0077ff;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #0056b3;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    .code-block {
+      background: #f9f9f9;
+      padding: 10px;
+      border-left: 4px solid #0077ff;
+      margin: 20px 0;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Penjelasan Simulasi Pergerakan Orbit dan Kalkulator Curah Hujan</h1>
+
+    <h2>1. Topik Web</h2>
+    <p>Website ini mencakup dua aplikasi utama:</p>
+    <ul>
+      <li><strong>Simulasi Pergerakan Orbit Interaktif:</strong> Memodelkan pergerakan benda langit (planet, satelit) dalam lintasan elips dengan parameter yang dapat diubah pengguna.</li>
+      <li><strong>Kalkulator Curah Hujan:</strong> Menghitung total curah hujan berdasarkan laju hujan dan durasi menggunakan metode integral sederhana.</li>
+    </ul>
+
+    <h2>2. Rumus yang Berhubungan</h2>
+    <h3>Simulasi Pergerakan Orbit</h3>
+    <p>Perhitungan menggunakan persamaan parametrik untuk lintasan elips:</p>
+    <div class="code-block">
+      x = a * cos(θ)  <br>
+      y = b * sin(θ)
+    </div>
+    <p>di mana:</p>
+    <ul>
+      <li><strong>a:</strong> Radius semi-major (sumbu panjang).</li>
+      <li><strong>b:</strong> Radius semi-minor (sumbu pendek).</li>
+      <li><strong>θ:</strong> Sudut yang berubah terhadap waktu.</li>
+    </ul>
+
+    <h3>Kalkulator Curah Hujan</h3>
+    <p>Curah hujan total dihitung sebagai integral sederhana:</p>
+    <div class="code-block">
+      Total Rainfall = ∫ Rate * dt
+    </div>
+    <p>Jika laju hujan (\(Rate\)) konstan selama durasi (\(t\)):</p>
+    <div class="code-block">
+      Total Rainfall = Rate * t
+    </div>
+
+    <h2>3. Tujuan Web</h2>
+    <ul>
+      <li>Meningkatkan pemahaman tentang konsep orbit dan cuaca melalui visualisasi interaktif.</li>
+      <li>Membantu siswa dan peneliti memahami bagaimana metode matematika seperti integral dan diferensial diterapkan dalam astrofisika dan meteorologi.</li>
+      <li>Memberikan alat edukatif yang dapat digunakan secara mandiri untuk eksplorasi konsep fisika.</li>
+    </ul>
+
+    <h2>4. Metode yang Berhubungan</h2>
+    <p>Web ini menggabungkan dua metode utama:</p>
+    <ul>
+      <li><strong>Metode Diferensial:</strong> Digunakan untuk menghitung kecepatan dan percepatan orbit dari turunan posisi terhadap waktu.</li>
+      <li><strong>Metode Integral:</strong> Digunakan untuk menghitung total curah hujan dari akumulasi laju hujan selama durasi tertentu.</li>
+    </ul>
+
+    <h2>5. Algoritma/Flowchart</h2>
+    <h3>Simulasi Pergerakan Orbit</h3>
+    <ol>
+      <li>Input parameter orbit: semi-major axis (\(a\)), semi-minor axis (\(b\)), dan kecepatan (\(speed\)).</li>
+      <li>Inisialisasi sudut awal (\(θ = 0\)).</li>
+      <li>Hitung posisi (\(x, y\)) menggunakan persamaan parametrik.</li>
+      <li>Tampilkan posisi objek di canvas.</li>
+      <li>Perbarui sudut (\(θ = θ + speed\)).</li>
+      <li>Ulangi langkah 3-5 menggunakan `requestAnimationFrame()`.</li>
+    </ol>
+
+    <h3>Kalkulator Curah Hujan</h3>
+    <ol>
+      <li>Input laju curah hujan (\(Rate\)) dan durasi hujan (\(t\)).</li>
+      <li>Validasi input untuk memastikan nilai positif.</li>
+      <li>Hitung curah hujan total menggunakan formula: \(Rate \cdot t\).</li>
+      <li>Tampilkan hasil kepada pengguna.</li>
+    </ol>
+
+    <h2>6. Hasil dan Pembahasan</h2>
+    <p>Hasil dari simulasi orbit menunjukkan bagaimana parameter seperti radius semi-major dan semi-minor memengaruhi bentuk orbit. Kecepatan rotasi memengaruhi kecepatan pergerakan objek di sepanjang lintasan.</p>
+    <p>Hasil kalkulator curah hujan memungkinkan pengguna memahami hubungan antara laju hujan dan durasi dalam menentukan total curah hujan. Dengan metode integral, perhitungan menjadi lebih mudah dan intuitif.</p>
+
+    <h2>7. Kesimpulan</h2>
+    <p>Website ini mengintegrasikan konsep matematika, fisika, dan komputasi untuk memvisualisasikan dan menghitung fenomena dalam astrofisika dan meteorologi. Simulasi orbit membantu memahami dinamika benda langit, sementara kalkulator curah hujan memberikan wawasan tentang metode integral dalam konteks cuaca. Kombinasi interaktivitas dan pendidikan membuat web ini menjadi alat yang bermanfaat untuk pembelajaran.</p>
+  </div>
+</body>
+</html>
